@@ -1,0 +1,328 @@
+:root{
+    --Primario: #b047ec; 
+    --Secundario: #F27EDD;
+    --Fondo: #ae88f8 ;
+    --Fondob: #154470; 
+    --Morado: #331221 ;
+
+    --Blanco: #fff;
+    --Negro: #000;
+
+    --fuentePrincipal: "Staatliches", cursive;
+
+}
+/*globales*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*1rem =10 px*/
+  
+
+  }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+body{
+    background-color: #F4DFDA;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+
+p {
+    font-size: 1.8rem;
+    font-family:Arial, Helvetica, sans-serif ;
+    color: #9F8E8E;
+}
+
+a{
+    text-decoration: none;    
+}
+
+img{
+    max-width: 60%;
+    
+}
+
+
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--Secundario);
+    font-family: var(--fuentePrincipal);
+}
+
+h1 { font-size: 4rem;
+    color: var(--Primario);
+}
+h2 { font-size: 3.2rem;
+}
+h3 { font-size: 2.4rem;
+}
+
+
+
+/**header**/
+
+.header {
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.header__logo {
+    margin: 3rem 20%;
+    
+    
+}
+
+/*footer*/
+
+.footer {  
+    background-color: var(--Primario); 
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__texto {
+font-family: var(--fuentePrincipal);
+text-align: center;
+font-size: 2.2rem;
+}
+
+/*navegacion*/
+    
+.navegacion {
+    background-color: var(--Primario);
+    padding: 3rem 0rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--Blanco);
+    font-size: 5rem;
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--Secundario);
+}
+
+  
+
+/*grid*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+
+
+/*producto*/
+
+.producto{
+    background-color: #4B1632;
+    padding: 1rem ;
+        
+}
+
+    
+.producto__imagen {
+    min-width: 100%;
+   }
+
+.producto__nombre{
+    font-size: 4rem;
+    color: var(--Secundario);
+}
+.producto__precio{
+    font-size: 2rem; 
+    color: var(--Blanco);  
+ 
+}
+.producto__precio,
+.producto__nombre {
+    margin: 2rem 0;
+    text-align: center;
+    line-height: 1.5rem; 
+    font-family: var(--fuentePrincipal) 
+}
+
+
+
+/*graficos*/
+
+.grafico {
+  min-height: 30rem;
+  background-repeat: no-repeat;
+  background-size: cover;    
+  grid-column: 1 / 3 ;
+ }
+
+
+.grafico--pulsera{
+    grid-row: 2 / 3 ;
+    background-image: url(../img/20.png);
+}
+
+.grafico--negro {
+    background-image: url(../img/21.png);
+    grid-row: 6 / 7 ;
+}
+
+
+/*Media Queri*/
+
+@media (min-width: 768px){
+    .grafico--negro{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+
+    }
+}
+     
+
+@media (min-width: 768px){
+    .grid {
+        grid-template-columns: repeat(3, 1fr);   
+    }
+}
+    
+
+
+
+
+/*Nosotros */
+
+@media (min-width: 768px){ 
+    .Nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+}
+}
+
+
+.Nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+
+}
+
+.Nosotros__imagen {
+    grid-row: 1 / 2;
+    min-width: 100%;
+    border: 1rem solid #4B1632;
+}
+
+@media (min-width: 768px){
+    .Nosotros__imagen {
+        grid-column: 2 / 3;
+    }
+     
+    
+}
+
+
+/* boques */
+
+.bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px){
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
+
+.bloque{
+    text-align: center;
+    
+    
+}
+
+.boloque__imagen {
+    width: 100%;
+}
+
+.comprar__titulo,
+.blque__titulo{
+    margin: 0;
+    color: var(--Primario);
+}
+
+
+
+
+/*  Pagina productos  */
+
+
+
+.Formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+}
+.formulario__campo{
+   /* border-color: var(--Primario);
+    border-width: 1rem;
+    border-style: solid;*/
+    border: 1rem solid var(--Primario);
+    background-color: transparent;
+    color: var(--Fondob);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+.fomulario__submit{
+    background-color: var(--Primario);
+    border: none;
+    font-size: 2rem;
+    color: var(--Blanco);
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color 1s ease;
+    grid-column: 1 / 3;
+   
+}
+.fomulario__submit:hover{
+    cursor: pointer;
+    background-color: var(--Secundario);
+}
+
+.pulc__imagen{
+    margin-left: 20%;
+    padding: 2rem;
+
+}
+
+@media (min-width:768px ){
+    .pulc {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    } 
+ 
+    .fomulario__submit{
+        grid-column: 1 / 3;
+    }
+
+}
